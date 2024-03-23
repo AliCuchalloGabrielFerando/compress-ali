@@ -1,6 +1,6 @@
 {
   "name": "compress-ali",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "reduce file sizes just do it",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

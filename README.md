@@ -22,34 +22,19 @@ npm i compress-ali
 pnpm i compress-ali
 ```
 
-Example with NEXT
+Code:
 
 ```
-"use client";
-import { useState } from "react";
 import { compressImage } from "compress-ali";
 
-export default function Home() {
+const file:File | null = null
 
- const [file, setFile] = useState<File | null>(null);
+// send only the file
+const newFile = await compressImage(file!);
 
- //init your custom event
-    // send only the file
-    const newFile = await compressImage(file!);
+//more parameters: quality:[0.2 - 0.6](recommendation default 0.2), type: (its file.type)
+const newFile = await compressImage(file,0.5,"image/jpeg");
 
-    //more parameters: quality:[0.2 - 0.6](recommendation default 0.2), type: (its file.type)
-    const newFile = await compressImage(file,0.5,"image/jpeg");
-
-//end your custom event
-
-return(
-    <div>
-    //your elements
-            <input placeholder="File"
-            onChange={(e: any) => setFile(e.target.files[0])}/>
-    </div>
-)
-}
 ```
 
 ## Quality
