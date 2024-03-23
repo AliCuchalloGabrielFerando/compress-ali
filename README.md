@@ -2,7 +2,7 @@
 
 ## reduce file size
 
-reduce the size of images with JPG extension
+reduce the size of images with JPEG extension
 
 ## Warning
 
