@@ -13,6 +13,7 @@ export const compressImage = async (
   if (ctx) {
     ctx.drawImage(imageBitmap, 0, 0);
   } else {
+    //console.log("error with the process compress");
     return file;
   }
 
@@ -20,11 +21,10 @@ export const compressImage = async (
   const blob: Blob | null = await new Promise((resolve) =>
     canvas.toBlob(resolve, type, quality)
   );
-  console.log("en construccion");
   // Turn Blob into File
   const newFile = new File([blob!], file.name, {
     type: blob!.type,
   });
-  console.log(newFile);
+
   return newFile;
 };
